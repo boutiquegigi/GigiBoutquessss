@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <link rel="stylesheet" href="./add/add.css">
+</head>
+<body>
+  <form id="custom_form">
+    <h1>add product</h1>
+    <input list="browsers" id="section"  placeholder="ادخل قسم المنتج" required>
+    <datalist id="browsers">
+       <option id="makeup" value="make up">
+       <option id="skin" value="منتجات البشرة">
+       <option id="body"value="منتجات الجسم">
+       <option id="leg" value="منتجات عناية بالقدم">
+       <option id="heir" value="منتجات الشعر">
+       <option id="pregnant" value="منتجات الحامل">
+       <option id="femal" value="عطور نسائية">
+       <option id="male" value="منتجات رجالية">
+       <option id="access" value="منتجات اكسسوارات">
+    </datalist>
+    <input type="text" id="name"  placeholder="ادخل اسم المنتج" required/>
+    <input type="number" id="price"  placeholder="ادخل سعر المنتج" required/>
+    <input type="text" id="description"  placeholder="ادخل وصف المنتج" required/>
+    <input type="number" id="lengths"  placeholder="ادخل عدد صور المنتج" required/>
+    <div class="image">
+    </div>
+    <button type="submit">add</button>
+  </form>
+
+<form id="del_custom_form">
+  <h1>delete product</h1>
+  <input list="browsers2" id="section2"  placeholder="ادخل قسم المنتج" required>
+  <datalist id="browsers2">
+    <option id="makeup" value="make up">
+    <option id="skin" value="منتجات البشرة">
+    <option id="body"value="منتجات الجسم">
+    <option id="leg" value="منتجات عناية بالقدم">
+    <option id="heir" value="منتجات الشعر">
+    <option id="pregnant" value="منتجات الحامل">
+    <option id="femal" value="عطور نسائية">
+    <option id="male" value="منتجات رجالية">
+    <option id="access" value="منتجات اكسسوارات">
+  </datalist>
+  <input type="text" id="name2"  placeholder="ادخل اسم المنتج" required/>
+  <button type="submit">delete</button>
+
+</form>
+  <a href="./GigiApp.html">التطبيق</a>
+    <script src="./add/add.js"></script>
+
+
+</body>
+</html>

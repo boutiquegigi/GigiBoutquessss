@@ -1,0 +1,88 @@
+@import url(../style.css);
+
+.listProduct .item {
+    display: grid;
+    grid-template-columns:1fr 130px;
+    grid-template-rows: 49px 1fr 50px 50px 50px;
+    gap:5px;
+}
+.listProduct .item a {
+    grid-area:1/1/3/2;
+    width: 24em;
+}
+.listProduct .item .name{
+    grid-area:3/1/4/2;
+}
+.listProduct .item .price{
+    grid-area:4/1/5/2;
+}
+.listProduct .item button.addCart{
+    grid-area:5/1/6/2;
+    width: 80%;
+    margin-left: calc(80% - 258px);
+    height:40px;
+}
+.listProduct .item .itemdiv{
+    grid-area:1/2/2/3;
+}
+.listProduct .item .imgs{
+    grid-area:2/2/6/2;
+    margin: -126px 5px 0;
+}
+.listProduct .imgs img {
+    border: 1px black solid;
+}
+.listProduct .item div[value="yes"] {
+    grid-area: 5 / 1 / 5 / 2;
+}
+.listProduct .item button[value="yes"] {
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+.listProduct .item[value="yes"]  {
+    grid-template-rows: 49px 1fr 30px 33px 40px;
+}
+.small {
+    height: 0px;
+}
+h2.write{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.listProduct {
+    margin: 116px 5% 0 5%;
+}
+
+@media (max-width: 580px) {
+    .listProduct .item {
+        grid-template-rows: 49px 1fr 50px 50px 50px;
+    }
+    .listProduct .item button.addCart {
+        margin-left: 24px;
+    }
+    .listProduct .item a {
+        width: 17em;
+    }
+}
+@media (max-width: 400px) {
+    .listProduct .item .imgs {
+        margin: -29px 5px 0;
+    }
+    .listProduct .item button.addCart {
+        margin-left: 24px;
+    }
+    .listProduct .item a {
+        width: 8em;
+    }
+    .listProduct .item {
+        width: 80%;
+        grid-template-columns: 1fr 144px;
+        grid-template-rows: 0 1fr 101px 33px 50px;
+        margin-left: 10px;
+    }
+    .listProduct .imgs img {
+        width: 60%;
+    }
+    .listProduct .item.write {
+        grid-template-rows: 0 1fr 60px 49px 50px;
+    }
+}
