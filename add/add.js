@@ -15,7 +15,7 @@ let s=[]
 
 //prodctus array
 const initApp = () => {
-    if(localStorage.getItem("checkbo")==null){
+    if(localStorage.getItem("checkbox")==null){
         localStorage.setItem('checkbox', JSON.stringify([]));
         fetch('../products.json')
         .then(response => response.json())
