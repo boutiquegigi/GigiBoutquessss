@@ -1,6 +1,4 @@
 let sect=[];
-products=localStorage.getItem("checkbox")
-products=JSON.parse(products);
 
 console.log(products,products==null)
 if(products==[]||products==""||products==null){
@@ -11,6 +9,10 @@ if(products==[]||products==""||products==null){
         localStorage.setItem("checkbox",products)
         console.log(products)
     })
+}
+else{
+   products=localStorage.getItem("checkbox")
+   products=JSON.parse(products); 
 }
 
 console.log(products)
