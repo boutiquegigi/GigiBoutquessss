@@ -13,6 +13,26 @@ let newprod= {};
 let arrpod= [];
 let s=[]
 
+//prodctus array
+const initApp = () => {
+    if(localStorage.getItem("checkbox")==null){
+        localStorage.setItem('checkbox', JSON.stringify([]));
+        fetch('../products.json')
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            localStorage.setItem('checkbox', JSON.stringify(data));
+        })
+    }
+    else{
+        products=localStorage.getItem("checkbox")
+        products=JSON.parse(products);
+        console.log(products)
+    }
+}
+initApp();
+
+//section input
 section.addEventListener("input", (e)=>{
     index=products.findIndex((values) =>(values!=undefined&& values.id==undefined));
     newprod.count=index;
@@ -29,18 +49,23 @@ section.addEventListener("input", (e)=>{
     let option=document.querySelector(`option[value="${e.target.value}"]`);
     newprod.section=`${option.id}`;
 })
+
+//name product input
 names.addEventListener("input", (e)=>{
     newprod.name=e.target.value;
 })
 
+//price product input
 price.addEventListener("input", (e)=>{
     newprod.price=e.target.value;
 })
 
+//description product input
 description.addEventListener("input" , (e)=>{
     newprod.color=e.target.value;
 })
 
+//lengths product input
 lengths.addEventListener("input", (e) =>{
     newprod.lengths = e.target.value;
     value = e.target.value;
@@ -86,7 +111,6 @@ lengths.addEventListener("input", (e) =>{
         arrpod[i].image=productimg[i].src;
         products[products.findIndex((values) =>( values.id==undefined ))]=(arrpod[i])
         console.log(products)
-
       }
     }
     console.log(products)
@@ -104,27 +128,7 @@ const addCartToMemory = () => {
     localStorage.setItem('checkbox', JSON.stringify(products));
 }
 
-
-const initApp = () => {
-    products=localStorage.getItem("checkbox");
-    products=JSON.parse(products);
-    console.log(localStorage.getItem("checkbox"),products,products==null);
-
-    if(products==[]||products==""||products==null){
-    fetch('../products.json')
-    .then(response => response.json())
-    .then(data => {
-        products = data;
-        console.log(products)
-    })
-}
-}
-initApp();
-form.addEventListener("submit",e =>{
-    window.onload = arrpod;
-})
-
-
+//for delete product
 section=document.querySelector(`#section2`);
 let delesection="";
 let index2=0;

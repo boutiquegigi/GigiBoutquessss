@@ -1,21 +1,26 @@
 let sect=[];
 let products = [];
 
-console.log(products,products==null,products==[],products=="")
-if(products==[]||products==""||products==null){
-    fetch('../../products.json')
-    .then(response => response.json())
-    .then(data => {
-        products = data;
-       // localStorage.setItem("checkbox",products)
+function adding(){
+    if(localStorage.getItem("checkbox")==null){
+        localStorage.setItem('checkbox', JSON.stringify([]));
+        fetch('../../products.json')
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            console.log(products)
+            localStorage.setItem('checkbox', JSON.stringify(data));
+        })
+    }
+    else{
+        products=localStorage.getItem("checkbox")
+        products=JSON.parse(products);
         console.log(products)
-        sec()
-    })
+    }
+    sec()
 }
-/*else{
-   products=localStorage.getItem("checkbox")
-   products=JSON.parse(products); 
-}*/
+adding();
+
 function sec(){
 console.log(products)
 products.forEach(prod=>{
