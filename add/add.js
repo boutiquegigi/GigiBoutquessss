@@ -116,8 +116,20 @@ lengths.addEventListener("input", (e) =>{
     console.log(products)
 });
 
+let text=document.querySelector(".text .here");
+ text.onclick = function() {
+      document.execCommand("copy");
+    }
+    
+    text.addEventListener("copy", function(event) {
+      event.preventDefault();
+      if (event.clipboardData) {
+        event.clipboardData.setData("text/plain", JSON.stringify(products));
+        console.log(event.clipboardData.getData("text"))
+        alert("you copy the text!!");
+      }
+    });
 form.addEventListener("submit", (e)=>{
-    console.log(products)
     if(localStorage.getItem('checkbox')==""){
         localStorage.setItem('checkbox', JSON.stringify(products))  
         } 
