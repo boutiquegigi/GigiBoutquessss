@@ -13,7 +13,7 @@ if(products==[]||products==""||products==null){
     })
 }
 
- 
+console.log(products)
 products.forEach(prod=>{
     if(prod.section=="makeup"){
         sect.push(prod.count);
