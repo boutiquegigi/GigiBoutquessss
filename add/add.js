@@ -12,8 +12,20 @@ let description=document.querySelector(`#description`);
 let newprod= {};
 let arrpod= [];
 let s=[]
-
+let clear=document.querySelector("#clear")
+console.log(clear)
 //prodctus array
+clear.addEventListener("click", (e)=>{
+    localStorage.setItem('checkbox', JSON.stringify([]));
+    fetch('https://maisserhan.github.io/GigiBoutquessss/products.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        console.log(data)
+        localStorage.setItem('checkbox', JSON.stringify(data));
+    })
+})
+
 const initApp = () => {
     if(localStorage.getItem("checkbox")==null){
         localStorage.setItem('checkbox', JSON.stringify([]));
