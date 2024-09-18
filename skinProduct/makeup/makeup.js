@@ -7,7 +7,7 @@ if(products==[]||products==""||products==null){
     .then(response => response.json())
     .then(data => {
         products = data;
-       // localStorage.setItem("checkbox",products)
+        localStorage.setItem("checkbox",products)
         console.log(products)
         sec()
     })

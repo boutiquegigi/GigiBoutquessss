@@ -85,12 +85,16 @@ lengths.addEventListener("input", (e) =>{
         productimg[i].style.height="100px";
         arrpod[i].image=productimg[i].src;
         products[products.findIndex((values) =>( values.id==undefined ))]=(arrpod[i])
+        console.log(products)
+
       }
     }
+    console.log(products)
 });
 
 form.addEventListener("submit", (e)=>{
-    if(JSON.parse(localStorage.getItem('checkbox'))==""){
+    console.log(products)
+    if(localStorage.getItem('checkbox')==""){
         localStorage.setItem('checkbox', JSON.stringify(products))  
         } 
     else addCartToMemory();
@@ -102,9 +106,9 @@ const addCartToMemory = () => {
 
 
 const initApp = () => {
-    products=localStorage.getItem("checkbo");
+    products=localStorage.getItem("checkbox");
     products=JSON.parse(products);
-    console.log(products,products==null);
+    console.log(localStorage.getItem("checkbox"),products,products==null);
 
     if(products==[]||products==""||products==null){
     fetch('../products.json')
