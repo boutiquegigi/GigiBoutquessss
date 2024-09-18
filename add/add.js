@@ -17,10 +17,11 @@ let s=[]
 const initApp = () => {
     if(localStorage.getItem("checkbox")==null){
         localStorage.setItem('checkbox', JSON.stringify([]));
-        fetch('../products.json')
+        fetch('https://maisserhan.github.io/GigiBoutquessss/products.json')
         .then(response => response.json())
         .then(data => {
             products = data;
+            console.log(data)
             localStorage.setItem('checkbox', JSON.stringify(data));
         })
     }
@@ -29,6 +30,8 @@ const initApp = () => {
         products=JSON.parse(products);
         console.log(products)
     }
+    console.log((products))
+
 }
 initApp();
 
@@ -124,7 +127,10 @@ let text=document.querySelector(".text .here");
     text.addEventListener("copy", function(event) {
       event.preventDefault();
       if (event.clipboardData) {
-        event.clipboardData.setData("text/plain", JSON.stringify(products));
+        let cop=JSON.stringify(products);
+        cop=cop.replaceAll(",",",\n")
+        cop=cop.replaceAll("{","\n{")
+        event.clipboardData.setData("text/plain", cop);
         console.log(event.clipboardData.getData("text"))
         alert("you copy the text!!");
       }
