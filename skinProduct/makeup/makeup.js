@@ -1,12 +1,14 @@
 let sect=[];
-
 products=localStorage.getItem("checkbox")
 products=JSON.parse(products);
-if(products==[]||products==""){
+
+
+if(products==[]||products==""||products==null){
     fetch('../products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
+        console.log(products)
     })
 }
  
