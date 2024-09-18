@@ -102,13 +102,16 @@ const addCartToMemory = () => {
 
 
 const initApp = () => {
-    products=localStorage.getItem("checkbox")
+    products=localStorage.getItem("checkbo");
     products=JSON.parse(products);
-    if(products==[]||products==""){
+    console.log(products,products==null);
+
+    if(products==[]||products==""||products==null){
     fetch('../products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
+        console.log(products)
     })
 }
 }
