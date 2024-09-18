@@ -7,7 +7,7 @@ let closeCart = document.querySelector('.close');
 const nav=document.querySelector(".navbar__menu");
 let ul=document.getElementById("navbar__list");
 let asul=document.getElementById("aside__list");
-let products = [];
+// products = [];
 let prodimage = [];
 let cart = [];
 var user="";
@@ -367,11 +367,14 @@ const changeQuantityCart = (product_id, type) => {
 
 const addDataToHTML = () => {
     let col=localStorage.getItem("colr");
+    console.log("products",products,col)
+
     if(col!=-1){
     document.getElementById(`section${col}`).style.color="#b69292";
     document.querySelector(`aside #section${col}`).style.color="#b69292"; 
     }
     let sect=[...(localStorage.getItem("sections").split(','))];
+    console.log(sect)
     if(products.length > 0){
         for(let j=0;j<sect.length;j+=1){
           i=sect[j];
@@ -463,12 +466,12 @@ const clickimg = (i,product_id,first,len) =>{
 
  const initApp = () => {
     // get data product
-    products=localStorage.getItem("checkbox")
+   // products=localStorage.getItem("checkbox")
 
-    products=JSON.parse(products);
-   
-    if(products==[]||products==""){
-    fetch('../products.json')
+   // products=JSON.parse(products);
+  // console.log("products",products)
+    if(products==[]||products==""||products==null){
+    fetch('../../products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
