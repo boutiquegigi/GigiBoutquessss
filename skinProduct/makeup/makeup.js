@@ -4,7 +4,7 @@ products=JSON.parse(products);
 
 console.log(products,products==null)
 if(products==[]||products==""||products==null){
-    fetch('../products.json')
+    fetch('../../products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
