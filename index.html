@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./add/add.css">
 </head>
 <body>
-  <button id="clear">تنظيف الارشيف</button>
+  <button id="clear">جلب القيم من السيرفر</button>
   <form id="custom_form">
-    <h2>add product</h2>
-    <h3>النموذج الاول يتضمن اضافة عدة صور وكل صورة يتم اضافتها على السلة بشكل منفصل</h3>
+    <h2><img src="https://img.icons8.com/?size=100&id=8uOuKsWHznZu&format=png&color=000000" width="25px"> add product </h2>
+    <h3>يتضمن اضافة عدة صور وكل صورة يتم اضافتها على السلة بشكل منفصل</h3>
     <input list="browsers" id="section"  placeholder="ادخل قسم المنتج" required>
     <datalist id="browsers">
        <option id="makeup" value="make up">
@@ -29,11 +29,11 @@
     <a href="https://imagekit.io/dashboard/media-library" target="_blank">رابط موقع الصور</a>
     <div class="image">
     </div>
-    <button type="submit">add</button>
+    <button type="submit" class="addtion">add</button>
   </form>
-
+  <hr>
 <form id="del_custom_form">
-  <h2>delete product</h2>
+  <h2>delete product <img src="https://img.icons8.com/?size=100&id=67884&format=png&color=000000" width="20px" class="dele"></h2>
   <input list="browsers2" id="section2"  placeholder="ادخل قسم المنتج" required>
   <datalist id="browsers2">
     <option id="makeup" value="make up">
@@ -48,15 +48,12 @@
   </datalist>
   <input type="text" id="name2"  placeholder="ادخل اسم المنتج" required/>
   <button type="submit">delete</button>
-
 </form>
-  <a href="https://gigi-boutque.vercel.app/" target="_blank">التطبيق</a>
 <div class="text">
   <p class="here">copy this text</p>
   <a href="https://github.com/MaisSerhan/GigiBoutquessss/blob/main/products.json" target="_blank">الانتقال للموقع لاضافة على السيرفروعمل لصق</a>
 </div>
-
-  <script src="./add/add.js"></script>
-
+<a href="https://gigi-boutque.vercel.app/" target="_blank">التطبيق</a>
+<script src="./add/add.js"></script>
 </body>
 </html>
