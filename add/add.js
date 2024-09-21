@@ -135,7 +135,7 @@ function findcpoyprod(value, newprod, nexts, arrpod){
 function addcart(elemimag, value){
     for(let i=0;i<value;i++){
         elemimag += `<div class="cart${i} proimg"><label for="input-file${i}" id="labelinput${i}"><img src="" id="productimg${i}">${i+1} صورة المنتج </label>
-        <input type="url" class="input-file" id="input-file${i}"  placeholder="URL" required>
+        <input type="url" class="input-file" id="input-file${i}"  placeholder="رابط الصورة" required>
         <input type="text" id="description${i}" class="description"  placeholder="ادخل كلمة للزر التفاصيل المنتج" required/>
         <input type="number" id="colnum${i}" class="colnum"  placeholder="${i+1} عدد الوان صورة المنتج " />
         <div class="divcol${i} divcols">
@@ -143,7 +143,7 @@ function addcart(elemimag, value){
          </div>
         `
     }
-    elemimag += `<textarea id="write" class="write" rows="4" cols="50" placeholder="  تفاصيل المنتج كبيرة يتم التعبئة غير ذلك يترك فارغ"></textarea>
+    elemimag += `<textarea id="write" class="write" rows="4" cols="50" placeholder="اذا كانت تفاصيل المنتج كبيرة يتم التعبئة غير ذلك يترك فارغ"></textarea>
         </div>`
     console.log("elemimag", elemimag)
     return elemimag;
