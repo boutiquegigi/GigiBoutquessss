@@ -1,4 +1,5 @@
 body{
+    padding-left: 16px;
     background-color: #f5dcf1;
 }
 .image{
@@ -13,8 +14,10 @@ body{
 input{
     margin: 5px;
     padding: 6px;
+    text-align: center;
 }
 button{
+    cursor: pointer;
     padding: 6px 8px;
     margin: 9px;
     font-size: medium;
@@ -27,12 +30,11 @@ button[type="submit"]{
 }
 .text .here{
     cursor: pointer;
-    margin: 50px 10% 5px 0;
+    margin: 34px 10% 18px 0;
     border: 5px solid black;
     padding: 5px;
     width: fit-content;
     block-size: fit-content;
-
 }
 div{
     margin: 24px 0;
@@ -42,4 +44,14 @@ div{
 }
 .divcols input{
     border-radius: 50px;
+}
+.dele{
+    margin-bottom: -2px;
+}
+textarea {
+    text-align: center;
+    padding-top: 39px;
+}
+hr{
+    margin: 37px 0;
 }
