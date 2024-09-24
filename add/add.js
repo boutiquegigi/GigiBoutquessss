@@ -16,7 +16,7 @@ let clear=document.querySelector("#clear")
 //get prodctus array from json
 clear.addEventListener("click", (e)=>{
     localStorage.setItem('checkbox', JSON.stringify([]));
-    fetch('https://maisserhan.github.io/GigiBoutquessss/products.json')
+    fetch('https://boutiquegigi.github.io/GigiBoutquessss/products.json')
     .then(response => response.json())
     .then(data => {
         products = data;
@@ -28,7 +28,7 @@ clear.addEventListener("click", (e)=>{
 const initApp = () => {
     if(localStorage.getItem("checkbox")==null){
         localStorage.setItem('checkbox', JSON.stringify([]));
-        fetch('https://maisserhan.github.io/GigiBoutquessss/products.json')
+        fetch('https://boutiquegigi.github.io/GigiBoutquessss/products.json')
         .then(response => response.json())
         .then(data => {
             products = data;
