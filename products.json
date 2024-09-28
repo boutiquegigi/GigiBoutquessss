@@ -287,7 +287,7 @@
 "next":"item23",
 "class":"show",
 "newval":"yes",
-"values":["Strawberry "],
+"values":["Strawberry"],
 "color":"الأنواع المتوفرة ",
 "image":"https://ik.imagekit.io/b70r1u9rq/IMG_2037.jpeg?updatedAt=1727181649816"},
 
@@ -301,8 +301,8 @@
 "next":"item22",
 "class":"hidden",
 "newval":"yes",
-"values":["Strawberry ",
-"Lemon cake"],
+"values":["Strawberry",
+"Lemon_cake"],
 "color":"الأنواع المتوفرة ",
 "image":"https://ik.imagekit.io/b70r1u9rq/IMG_2038.jpeg?updatedAt=1727181651572"},
 
